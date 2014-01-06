@@ -81,36 +81,17 @@ if __name__ == '__main__':
     def main():
 
         sleep(1)
-        lcd.message("Tester linje 1", 1)
+        lcd.message("Testing line 1", 1)
         sleep(1)
-        lcd.message("Tester linje 2", 2)
+        lcd.message("Testing line 2", 2)
         sleep(1)
-        lcd.message("Tester linje 3", 3)
+        lcd.message("Testing line 3", 3)
         sleep(1)
-        lcd.message("Tester linje 4", 4)
+        lcd.message("Testing line 4", 4)
         sleep(5)
-        lcd.clear()
-        sleep(1)
-
-    def display_Date_Time():                                                                                                                                #Display date and time in an endless loop. (Example: 11/08/2013 '\n' 10:44:38 Sunday '\n' 11 August 2013)
-        b = True
-        while True:
-                for s in range(0, 20):
-                    lcd.message(datetime.datetime.now()
-                        .strftime('%d/%m/%Y'), 1)
-                    lcd.message(datetime.datetime.now()
-                        .strftime('%H:%M:%S'), 2)
-                    sleep(0.25)#Update time every 0.25 seconds.
-
-                    lcd.message(datetime.datetime.now()
-                        .strftime('%A'), 3)
-                    lcd.message(datetime.datetime.now()
-                        .strftime('%d %B %Y'), 4)
-                    lcd.clear()
 
     try:
-        #main()
-        display_Date_Time()
+        main()
     finally:
         GPIO.cleanup()
 
